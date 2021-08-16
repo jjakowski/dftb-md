@@ -1,0 +1,94 @@
+
+List of changes:
+
+ src-src2 : <-- electron  propagator (Send to Wenchang Liu on sept. 19,2013)
+
+
+2014-01-20
+=============
+dftb-src2  <-- basic S, and Hcore formation (formsh.f90) works  for SS, SP, PP,  SD, PD,DD   blocks 
+
+
+2014-06-10
+=============
+dftb-src3 <-- kloppman-Ohno (K.O) gamma, isecond order corrections
+   basic  version  with a  lot print works  as on Aug 5.
+   Two versions:  
+   -   G(P) based on shell  charges resolution   , DFTB-3 like  by Jacek,  with K.O. Gamma
+   -   G(P) based on atomic charges resolution   , M. Elst.   type   G, but with  K.O. gamma
+
+ missing:  
+   - M.Elst.  PRB. based  gamma (currently only K.O.)
+
+   
+
+Workflow for G(P)
+1) Gamma_mat          <--  U,Rmat
+2) charges (Q)        <--   S,P
+3) Hshift (gammaxQ)   <--   gamma ,Q  (dgemv(gamma,Q)  (matrix* vector)
+4) G(P)               <--   S,Hshift    [  G = 0.5* S(i,j) * (Hshift(i) +Hshift(j))
+
+
+
+
+2014-08-30
+============
+dftb-src4  <-----    gammamat from Elstner and  final charges for c2h2 are read in. 
+            Both  G(P),  and eigenvalues are the same as reference  (Elster)
+            Eigenvalues/vectors from  reference (Marcus Elster) are in  EVC.DAT
+            Diis is implemented but the results are crap.
+            Currently scf_diis+atrs  is used   but   the 
+
+
+2014-09-03
+==========
+dftb-src5  <-----  (1) electronic energy is calculated from gamma
+              (2) condition number in Pulay's diis is tested
+              (3)  scf is now fixed  and working: 
+                       -  SCFerr =  [Fo,Po] 
+                       -  we extrapolate F   (not P!) 
+                       - implemented as described in Pulay's paper (Pulay, J. Comp.Chem.  1982)
+              (4) notice:   input structure is in bohrs not in Ansgtrooms (standard DFTB+ and dftb  uses angstrooms)                     
+         SCF Examples for water:  
+
+   Jacek,  Tel=1e6 K
+   -----------------------
+    Iter,          Encc,              Ecoul,               Escf                dE 
+     1      -4.5602631948       0.0103015649      -4.5499616299      -4.5499616299 
+     2       3.5537841168       0.0012615198       3.5550456366       8.1050072666 
+     3       3.5366283784       0.0010377152       3.5376660936      -0.0173795430 
+     ...
+    18       3.5370302665       0.0010427446       3.5380730111       0.0000000006 
+    19       3.5370302664       0.0010427446       3.5380730110      -0.0000000001 
+    20       3.5370302664       0.0010427446       3.5380730110       0.0000000000 
+
+   DFTB+,  Tel=1.0e6
+   ----------------------- 
+             Fermi energy:                       3.3959267664 H           92.4079 eV
+             Band energy:                        3.4350974125 H           93.4738 eV
+             TS:                                21.9813092310 H          598.1419 eV
+             Band free energy (E-TS):          -18.5462118185 H         -504.6681 eV
+             Extrapolated E(0K):                -7.5555572030 H         -205.5972 eV
+             Input/Output electrons (q):      8.00000000      8.00000000
+  
+    Encc --> Energy H0:                          3.5370086746 H           96.2469 eV
+    Ecoul--> Energy SCC:                         0.0010427243 H            0.0284 eV
+    Escf --> Total Electronic energy:            3.5380513989 H           96.2753 eV
+             Repulsive energy:                   1.6049099648 H           43.6718 eV
+             Total energy:                       5.1429613637 H          139.9471 eV
+             Total Mermin free energy:         -16.8383478673 H         -458.1948 eV
+
+   
+
+ 
+2015-07-14
+==========
+  dftf-src5:
+- At line 120 of file slkomod.f90
+  Fortran runtime error: Array bound mismatch for dimension 2 of array 'temp' (522/521)
+
+2015-07-31
+===========
+dftb-src6  <---- scalapack added
+-   
+

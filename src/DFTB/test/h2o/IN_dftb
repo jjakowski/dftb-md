@@ -1,0 +1,23 @@
+ 2    1        ! ntype, iprint
+ 2 1           !  lmax1,...
+'/Users/j2c/Development/dftb-md/SLKO/oo.spl'
+'/Users/j2c/Development/dftb-md/SLKO/oh.spl'
+'/Users/j2c/Development/dftb-md/SLKO/ho.spl'
+'/Users/j2c/Development/dftb-md/SLKO/hh.spl'
+
+ 0       ! charge
+3
+
+1    0.0  0.0  0.0
+2    1.0  0.0  0.0
+2    0.0  1.0  0.0
+
+1                      !  read gammati, dQ   ? /1=yes/        ;   c2h2 gamma: j2c@mackaroo:~/Dropbox/new-dftb/20130513/src$ ./dftb
+ 0.4954000148E+00 
+ 0.4245766626E+00 0.4195000125E+00 
+ 0.4245766626E+00 0.3762481847E+00 0.4195000125E+00 
+
+ 6.644472511718753        0.6777637441406237    0.6777637441406239     ! charges 
+
+
+=======

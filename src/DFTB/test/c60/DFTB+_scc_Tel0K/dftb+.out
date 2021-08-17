@@ -1,0 +1,72 @@
+================================================================================
+==
+==   Density Functional based Tight Binding with a lot of extensions (DFTB+)    
+==
+==                              Release: 1.2 (p2)
+==
+==                            (ParserVersion = 4)
+==
+================================================================================
+
+
+********************************************************************************
+** Parsing and initializing
+********************************************************************************
+
+Interpreting input file 'dftb_in.hsd'
+--------------------------------------------------------------------------------
+Reading SK-files:
+  /Users/j2c/Development/DFTB+/mio-0-1/C-C.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+Mode:                        Static calculation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-09
+Max. scc iterations:                    100
+Ewald alpha parameter:         0.000000E+00
+Spin polarisation:           No
+Nr. of up electrons:           120.000000
+Nr. of down electrons:         120.000000
+Periodic boundaries:         No
+Diagonalizer:                Divide and Conquer
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                     100
+Nr. of chrg. vec. in memory:            100
+Electronic temperature:        0.316682E-05
+Initial charges:             Set automatically (system chrg:   0.000E+00)
+Included shells:              C:  s, p
+Extra options:
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+** Geometry step: 0
+********************************************************************************
+
+  iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.10853647E+03    0.00000000E+00    0.57963105E-02
+    2   -0.10853648E+03   -0.11085857E-04    0.32868310E-02
+    3   -0.10853648E+03   -0.26305661E-05    0.90833213E-03
+    4   -0.10853648E+03   -0.21726784E-06    0.32828909E-03
+    5   -0.10853648E+03   -0.31231224E-07    0.16117956E-03
+    6   -0.10853648E+03   -0.44046260E-08    0.32967973E-04
+    7   -0.10853648E+03   -0.29402258E-09    0.15058165E-04
+    8   -0.10853648E+03   -0.24371616E-10    0.38450713E-05
+    9   -0.10853648E+03   -0.14779289E-11    0.17141010E-05
+   10   -0.10853648E+03   -0.83844043E-12    0.30221226E-06
+   11   -0.10853648E+03   -0.42632564E-13    0.32962665E-07
+   12   -0.10853648E+03    0.28421709E-13    0.17929012E-07
+   13   -0.10853648E+03   -0.28421709E-13    0.27646623E-08
+   14   -0.10853648E+03    0.42632564E-13    0.13049641E-08
+   15   -0.10853648E+03   -0.14210855E-13    0.22895552E-09
+   16   -0.10853648E+03   -0.28421709E-13    0.61821215E-10
+>> Charges saved for restart in charges.bin
+
+ Total Energy:                    -102.9612123744 H
+ Total Mermin free energy:        -102.9612123744 H

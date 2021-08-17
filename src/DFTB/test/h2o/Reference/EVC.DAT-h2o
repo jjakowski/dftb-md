@@ -1,0 +1,78 @@
+                    THE ONE-ELECTRON EIGENVALUES AND EIGENVECTORS
+ 
+ 
+ NUMBER OF FILLED LEVELS:             4
+ 
+ 
+ THE    1. EIGENVALUE:    -0.92429326 H       -25.15150 eV
+ Atom No.   Atom Type
+               1                      1
+S   -0.74270
+Px  -0.02556
+Py  -0.02556
+Pz   0.00000
+               2                      2
+S   -0.16113
+               3                      2
+S   -0.16113
+ 
+ THE    2. EIGENVALUE:    -0.54614147 H       -14.86138 eV
+ Atom No.   Atom Type
+               1                      1
+S    0.00000
+Px  -0.47725
+Py   0.47725
+Pz   0.00000
+               2                      2
+S   -0.45636
+               3                      2
+S    0.45636
+ 
+ THE    3. EIGENVALUE:    -0.35962934 H        -9.78609 eV
+ Atom No.   Atom Type
+               1                      1
+S    0.34709
+Px  -0.63574
+Py  -0.63574
+Pz   0.00000
+               2                      2
+S   -0.13077
+               3                      2
+S   -0.13077
+ 
+ THE    4. EIGENVALUE:    -0.28648797 H        -7.79580 eV
+ Atom No.   Atom Type
+               1                      1
+S    0.00000
+Px   0.00000
+Py   0.00000
+Pz  -1.00000
+               2                      2
+S    0.00000
+               3                      2
+S    0.00000
+ 
+ THE    5. EIGENVALUE:     3.30687622 H        89.98539 eV
+ Atom No.   Atom Type
+               1                      1
+S    0.00000
+Px  -0.94846
+Py   0.94846
+Pz   0.00000
+               2                      2
+S    1.69769
+               3                      2
+S   -1.69769
+ 
+ THE    6. EIGENVALUE:     5.01623563 H       136.49979 eV
+ Atom No.   Atom Type
+               1                      1
+S   -1.90286
+Px  -0.63200
+Py  -0.63200
+Pz   0.00000
+               2                      2
+S    1.20651
+               3                      2
+S    1.20651
+ 

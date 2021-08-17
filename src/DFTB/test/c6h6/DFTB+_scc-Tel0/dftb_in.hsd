@@ -1,0 +1,56 @@
+Geometry = GenFormat {
+<<< "geom.gen"
+}
+
+Driver = {}
+
+Hamiltonian = DFTB {
+        #SCC = No 
+         SCC = Yes
+         SCCTolerance = 1E-10
+         MaxSCCIterations = 100
+        MaxAngularMomentum = {
+                C = "p"
+                H = "s"
+        }
+        Filling = Fermi {
+                # Temperature [Kelvin] = 0 
+                Temperature [Kelvin] = 1.0e0 
+        }
+        SlaterKosterFiles =  {
+                 C-C = "/Users/j2c/Development/DFTB+/mio-0-1/C-C.skf"
+                 C-H = "/Users/j2c/Development/DFTB+/mio-0-1/C-H.skf"
+                 H-C = "/Users/j2c/Development/DFTB+/mio-0-1/H-C.skf"
+                 H-H = "/Users/j2c/Development/DFTB+/mio-0-1/H-H.skf"
+        }
+        Charge = 0.0000000000000000
+#        ElectricField = {
+#                PointCharges = {
+#                        CoordsAndCharges [Angstrom] = {
+#                                100   0   0   .1
+#                               -100   0   0  -.1
+#                        }
+#                }
+#        }
+}
+
+# Options = {
+# # CalculateForces = No
+#   CalculateForces = Yes 
+# # ConvergentForcesOnly = Yes
+#   WriteEigenvectors = No
+#   WriteAutotestTag = No
+#   WriteDetailedXML = No
+#   WriteResultsTag = No
+#   WriteDetailedOut = Yes
+#   WriteBandOut = Yes
+# # AtomResolvedEnergies = No
+#   AtomResolvedEnergies = Yes 
+# # RestartFrequency = 20
+#   RandomSeed = 0
+# # WriteHS = No
+#   WriteHS = Yes 
+#   WriteRealHS = No
+#   MinimiseMemoryUsage = No
+#   ShowFoldedCoords = No
+#}

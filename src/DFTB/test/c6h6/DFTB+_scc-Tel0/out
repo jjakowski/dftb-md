@@ -1,0 +1,67 @@
+================================================================================
+==
+==   Density Functional based Tight Binding with a lot of extensions (DFTB+)    
+==
+==                              Release: 1.2 (p2)
+==
+==                            (ParserVersion = 4)
+==
+================================================================================
+
+
+********************************************************************************
+** Parsing and initializing
+********************************************************************************
+
+Interpreting input file 'dftb_in.hsd'
+--------------------------------------------------------------------------------
+Reading SK-files:
+  /Users/j2c/Development/DFTB+/mio-0-1/C-C.skf
+  /Users/j2c/Development/DFTB+/mio-0-1/C-H.skf
+  /Users/j2c/Development/DFTB+/mio-0-1/H-C.skf
+  /Users/j2c/Development/DFTB+/mio-0-1/H-H.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+Mode:                        Static calculation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-09
+Max. scc iterations:                    100
+Ewald alpha parameter:         0.000000E+00
+Spin polarisation:           No
+Nr. of up electrons:            15.000000
+Nr. of down electrons:          15.000000
+Periodic boundaries:         No
+Diagonalizer:                Divide and Conquer
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                     100
+Nr. of chrg. vec. in memory:            100
+Electronic temperature:        0.316682E-05
+Initial charges:             Set automatically (system chrg:   0.000E+00)
+Included shells:              C:  s, p
+                              H:  s
+Extra options:
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+** Geometry step: 0
+********************************************************************************
+
+  iSCC Total electronic   Diff electronic      SCC error    
+    1   -0.12930394E+02    0.00000000E+00    0.11072069E+00
+    2   -0.12932097E+02   -0.17034076E-02    0.77140883E-01
+    3   -0.12933707E+02   -0.16097491E-02    0.85139877E-04
+    4   -0.12933707E+02   -0.19480808E-08    0.60940480E-06
+    5   -0.12933707E+02    0.71054274E-14    0.19920578E-06
+    6   -0.12933707E+02   -0.12434498E-13    0.29935777E-08
+    7   -0.12933707E+02   -0.88817842E-14    0.29398706E-12
+>> Charges saved for restart in charges.bin
+
+ Total Energy:                     -12.5679846737 H
+ Total Mermin free energy:         -12.5679846737 H

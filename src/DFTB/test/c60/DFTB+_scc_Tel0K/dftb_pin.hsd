@@ -1,0 +1,128 @@
+Geometry = GenFormat {
+60 C
+C
+1   1     2.16650   0.59060   2.58740
+2   1     3.03780   0.17660   1.59180
+3   1     1.27860  -0.30980   3.16790
+4   1     3.01180  -1.14340   1.16540
+5   1     3.10340  -1.43350  -0.19300
+6   1     3.15030   1.21060   0.66820
+7   1     3.24280   0.91490  -0.68590
+8   1     3.21920  -0.40230  -1.12070
+9   1    -0.43930   1.35270   3.12710
+10   1     0.43630   2.26180   2.55420
+11   1    -0.02960   0.06330   3.43790
+12   1     1.74420   1.87900   2.28300
+13   1     2.35190   2.26760   1.09900
+14   1    -0.26330   3.02680   1.63260
+15   1     0.33740   3.40540   0.43730
+16   1     1.65160   3.02780   0.17070
+17   1    -2.09030  -0.82250   2.59550
+18   1    -2.51110   0.46640   2.28540
+19   1    -0.84490  -1.02520   3.17380
+20   1    -1.68740   1.55330   2.55120
+21   1    -1.58430   2.58580   1.63190
+22   1    -3.23140   0.40610   1.10070
+23   1    -3.12270   1.44100   0.17460
+24   1    -2.29470   2.52910   0.43990
+25   1    -0.49080  -2.91330   1.73650
+26   1    -1.74300  -2.71240   1.16370
+27   1    -0.03930  -2.06840   2.74530
+28   1    -2.54860  -1.66500   1.59420
+29   1    -3.26020  -0.91410   0.67010
+30   1    -1.65430  -3.00610  -0.18970
+31   1    -2.35420  -2.24390  -1.11700
+32   1    -3.16430  -1.19490  -0.68780
+33   1     2.13640  -2.05530   1.73580
+34   1     1.68950  -2.90090   0.72930
+35   1     1.27850  -1.63660   2.74350
+36   1     0.36780  -3.33270   0.73020
+37   1    -0.34400  -3.39040  -0.45940
+38   1     2.28890  -2.52500  -0.46400
+39   1     1.57900  -2.57180  -1.65800
+40   1     0.25600  -3.00540  -1.65310
+41   1    -2.18280  -0.57830  -2.59790
+42   1    -1.74800  -1.86940  -2.30830
+43   1    -0.43850  -2.24690  -2.58450
+44   1    -1.28150   0.31890  -3.16710
+45   1    -2.15260   2.05450  -1.73780
+46   1    -3.04850   1.15350  -1.18110
+47   1    -3.06560  -0.16290  -1.61070
+48   1    -1.26610   1.64070  -2.72710
+49   1     0.50390   2.93610  -1.74180
+50   1    -0.37880   3.35610  -0.75130
+51   1    -1.69430   2.91860  -0.74910
+52   1     0.05210   2.07300  -2.73550
+53   1     2.09760   0.83400  -2.60510
+54   1     2.55170   1.69230  -1.61070
+55   1     1.75890   2.74520  -1.18240
+56   1     0.84200   1.02060  -3.17860
+57   1     0.44610  -1.34950  -3.16610
+58   1     1.69830  -1.54850  -2.59080
+59   1     2.51840  -0.46230  -2.31710
+60   1     0.02180  -0.06450  -3.45850
+}
+Driver = {}
+Hamiltonian = DFTB {
+  SCC = Yes
+  SCCTolerance = 1E-10
+  MaxSCCIterations = 100
+  MaxAngularMomentum = {
+    C = "p"
+  }
+  Filling = Fermi {
+    Temperature [Kelvin] = 1.0e0
+  }
+  SlaterKosterFiles = {
+    C-C = "/Users/j2c/Development/DFTB+/mio-0-1/C-C.skf"
+  }
+  Charge = 0.0000000000000000
+  PolynomialRepulsive = {}
+  OldRepulsiveSum = No
+  OrbitalResolvedSCC = No
+  OldSKInterpolation = No
+  ReadInitialCharges = No
+  InitialCharges = {}
+  Mixer = Broyden {
+    MixingParameter = 0.20000000000000001
+    CachedIterations = -1
+    InverseJacobiWeight = 1.0000000000000000E-002
+    MinimalWeight = 1.0000000000000000
+    MaximalWeight = 100000.00000000000
+    WeightFactor = 1.0000000000000000E-002
+  }
+  ElectricField = {}
+  DampXH = No
+  SpinPolarisation = {}
+  Eigensolver = DivideAndConquer {}
+  Dispersion = {}
+  ThirdOrder = No
+  ThirdOrderFull = No
+}
+ParserOptions = {
+  ParserVersion = 4
+  WriteHSDInput = Yes
+  WriteXMLInput = No
+  StopAfterParsing = No
+  IgnoreUnprocessedNodes = No
+}
+Analysis = {
+  ProjectStates = {}
+}
+Options = {
+  CalculateForces = No
+  ConvergentForcesOnly = Yes
+  WriteEigenvectors = No
+  WriteAutotestTag = No
+  WriteDetailedXML = No
+  WriteResultsTag = No
+  WriteDetailedOut = Yes
+  WriteBandOut = Yes
+  AtomResolvedEnergies = No
+  RestartFrequency = 20
+  RandomSeed = 0
+  WriteHS = No
+  WriteRealHS = No
+  MinimiseMemoryUsage = No
+  ShowFoldedCoords = No
+}

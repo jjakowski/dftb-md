@@ -1,0 +1,12 @@
+ 2         ! ntype 
+ 2 1       !  lmax1,...
+'/Users/j2c/Dropbox/new-dftb/20130513/tests/oo.spl'
+'/Users/j2c/Dropbox/new-dftb/20130513/tests/oh.spl'
+'/Users/j2c/Dropbox/new-dftb/20130513/tests/ho.spl'
+'/Users/j2c/Dropbox/new-dftb/20130513/tests/hh.spl'
+
+3 
+
+1    0.0  0.0  0.0
+2    1.0  0.0  0.0 
+2    0.0  1.0  0.0 
